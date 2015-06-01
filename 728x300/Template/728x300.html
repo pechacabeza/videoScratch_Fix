@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <!-- ADRIME SCREENAD META DATA (don't edit/remove) -->
+    <!-- SCRVERSION: screenad_interface_1.0.3 -->
+    <!-- SCRFORMAT: banner -->
+    <!-- SCRWIDTH: 728 -->
+    <!-- SCRHEIGHT: 300 -->
+
+    <meta charset="UTF-8">
+
+    <script type="text/javascript" src="//media.adrcdn.com/scripts/screenad_interface_1.0.3_scrambled.js"></script>
+
+    <link href='main.css' rel='stylesheet' />
+    <script src='main.js'></script>
+    <script>
+        function init() {
+            screenad.setAlignment('banner', 'banner');
+            screenad.setSize("728px", "300px");
+            screenad.setSticky(true);
+            screenad.setZIndex(1);
+            screenad.setOffset(0, 0)
+            screenad.position();
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <div id="container" onclick="screenad.click();"></div>
+
+        <video id='media-video' controls poster="video_poster.jpg" autoplay muted class="adrime_video">
+            <source src='video.mp4' type='video/mp4'>
+            <source src='video.webm' type='video/webm'>
+        </video>
+
+        <div id='media-controls'>
+            <progress id='progress-bar' min='0' max='100' value='0'></progress>
+            <button id='replay-button' class='replay' title='replay' onclick='replayMedia();'></button>
+            <button id='play-pause-button' class='play' title='play' onclick='togglePlayPause();'></button>
+            <button id='mute-button' class='mute' title='mute' onclick='toggleMute("true");'></button>  
+    </div>
+
+    
+</body>
+
+</html>
